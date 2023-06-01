@@ -109,3 +109,289 @@ Console.WriteLine(DegerDondur(true));
 Console.WriteLine(DegerDondur(false));
 
 
+-----------------------------
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Yaz() { 
+        
+        }
+        static void Yaz(string mesaj)
+        {
+            Console.WriteLine("string parametreliş metod calisir...");
+        }
+
+        static void Yaz(int sayi)
+        {
+            Console.WriteLine("int parametrelki metod calisti....");
+        }
+
+        static int Yaz(double sayi)
+        {
+            return 1;
+        }
+        static void Main(string[] args)
+        {
+            //NSA:Aynı calisma alanında(scope) aynı isimli iki metod bulunamaz...
+
+            //KURAL : Aynı isimli birden fazla metod yazmak istersek; metodların imzalarının farklı olması gerekir...
+
+            //Imza Nasıl?
+            //1-Parametre sayisi
+            //2-Parametrenin tipleri
+
+            //Aynı scope içerisinde imzaları farklı olmak kaydıyla n tane metod aşırı yüklenebilir...
+
+            Yaz("deneme");
+            Yaz(343);
+            
+
+            //Soru: Dairenin Alanını hesaplayan metodu  aynı isimde 3 kere yazınız?
+        }
+    }
+}
+
+------------------------------
+void Topla(int s1, int s2)
+{
+    Console.WriteLine(s1+s2);
+   // return s1 + s2;
+}
+
+
+int Toplam(int s1, int s2)
+{
+    //Console.WriteLine(s1 + s2);
+     return s1 + s2;
+}
+
+int s= Toplam(4, 5) + 1;
+Toplam(3, 3);
+Console.ReadLine();
+
+void Yaz(string s)
+{ 
+  Console.WriteLine("Merhaba "  + s);
+}
+
+Yaz("Cevdet");
+
+---------------------------------
+
+namespace ConsoleApp4
+{
+    internal class Program
+    {
+        /// <summary>
+        /// Daire Alanını Hesaplayan metod
+        /// </summary>
+        /// <param name="r">yaricap double olmalı...</param>
+        /// <returns></returns>
+        static double DaireAlaniHesapla(double r)
+        {
+            return Math.PI * r * r;
+        }
+
+        /// <summary>
+        /// dfdfgdfh PI sayisi 3 olarak kabul edilir...
+        /// </summary>
+        /// <param name="r"></param>
+        /// <returns></returns>
+        static int DaireAlaniHesapla(int r)
+        {
+            return 3 * r * r;
+        }
+
+        /// <summary>
+        /// Daire Alanını Hesaplayan metod
+        /// </summary>
+        /// <param name="r"></param>
+        /// <returns></returns>
+        static double DaireAlaniHesapla(decimal r)
+        {
+            return (double)(3.1415M * r * r);
+        }
+
+        /// <summary>
+        /// Daire Alanını Hesaplayan metod
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="pi">pi yi giriniz...</param>
+        /// <returns></returns>
+        static double DaireAlaniHesapla(double r, double pi )
+        {
+            return pi * r * r;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="r"></param>
+        /// <returns></returns>
+        static float DaireAlaniHesapla(float r)
+        {
+            //CAST op. Tip Donusumu opr.
+            return (float)Math.PI * r * r;
+        }
+
+        static void Main(string[] args)
+        {
+            int yaricap =int.Parse(Console.ReadLine());
+            Console.WriteLine(DaireAlaniHesapla(yaricap));
+
+
+            Console.WriteLine(DaireAlaniHesapla(3.0));
+
+            
+        }
+    }
+}
+
+-----------------------------------
+
+namespace ConsoleApp5
+{
+    internal class Program
+    {
+        static double Toplam(double sayi1, double sayi2)
+        { 
+           return sayi1 + sayi2;
+        }
+
+        static double Toplam(double sayi1, double sayi2,double sayi3)
+        {
+            return sayi1 + sayi2 + sayi3;
+                 
+        }
+
+        static double Toplam(double sayi1, double sayi2, double sayi3,double sayi4)
+        {
+            return sayi1 + sayi2 + sayi3 + sayi4;
+
+        }
+
+        static void Yaz(int[] sayilar)
+        { 
+           foreach(int sayi in sayilar)
+            {
+                Console.WriteLine(sayi);
+            }
+        }
+        static double Sum(params double[] numbers)
+        {
+            double toplam = 0;
+            foreach(double number in numbers)
+            {
+                toplam += number;
+            }
+
+            return toplam;
+        }
+
+        static void ParamsTest(params int[] numbers)
+        { 
+           //NEDEN ???
+           //En son parametre params olmalı...
+           //Gelen argumentlerden hangisinin nerde biteceğini bilemediği için...
+           //bir tane olur, o da en sonda olmalı...
+
+        }
+        static void Calis() { }
+        static void Main(string[] args)
+        {
+            //Metodlarda params kullanımı
+            //Bir metodun n parametrreli aynı tip aşırı yüklenmiş versiyonu olmasa dahi params kullanarak her seferinde farklı arguments sayısı olacak şekilde bir metodu kullanabiliriz...
+
+            //Params kullanımında; 
+            //degerler argument gibi gönderilir...
+            //metoda aktarılırken diziye çevrilir...
+            //Parametreler AYNI TİP olmak zorunda...
+
+            //Bir metodda sadece bir tane params tanımlanabilir....
+            // O da en son parametre olmalıdir...
+
+            int[] sayilar = { 234, 564, 65, 22, 55 };
+
+            Yaz(sayilar);
+            //Yaz(1, 1, 1);
+
+            Sum(54, 6, 7, 8, 89, 9, 0, 33, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 33, 31213, 34);
+
+            Sum(54, 6, 7, 8, 89, 9, 0, 33, 3);
+            Sum(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+
+           // int s= Toplam(6, 7, 78, 8, 9, 8);
+         
+        }
+    }
+}
+
+----------------------------
+
+namespace ConsoleApp6
+{
+    internal class Program
+    {
+        static void Yaz(int a, int b=22, int c=33)
+        {
+            Console.WriteLine($"a={a} b={b} c={c}");
+        }
+
+        static int Topla(int a, int b = 22, int c = 33)
+        {
+            return a + b + c;
+        }
+
+        static void Main(string[] args)
+        {
+            //C# 4.0 ile gelmiştir...
+            //default parameters, named parameters
+
+            //NSA: Bir metodun kaç arametresi varsa o kadar argument gonderilmelidir...
+
+            //Yaz(1, 2);
+            //Yaz(1, 1, 1, 1, 1);
+
+            Yaz(1, 1, 1);
+            Yaz(2, 3);
+            Yaz(2, 3, 11);
+
+            //Default Parameters
+            //Bir metodun bir parametresine deger göndermeden varsayılan degeri ile kullanmak istersek kullanırız...
+            //Zorunlu parametrelerden sonra tanımlanmalıdır....
+            //Birden fazla olabilir...
+
+            Yaz(1);
+            Yaz(c: 33, a: 11); //Named parameters kullanımı
+
+            //Named Parameter kullanırken
+            //Sıralama önemli değil...
+            //değişken adından sonra : operatoru ile deger atanmalı...
+
+            Console.WriteLine(Topla(1,1,1));
+
+            string strMesaj = "Merhaba Dunya...";
+            
+        }
+    }
+}
+
+------------------------------------------
+
+string[] Sehirler()
+{
+    return new string[] { "Istanbul", "Ankara", "Bursa" };
+  
+}
+
+Random random= new Random();
+
+Console.WriteLine(random.Next());
+Console.WriteLine(random.Next(100));
+Console.WriteLine(random.Next(50,75));
+
+-----------------------------------------
+
+
