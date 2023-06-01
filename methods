@@ -394,4 +394,117 @@ Console.WriteLine(random.Next(50,75));
 
 -----------------------------------------
 
+//Kendi kendini cagiran metodlar...
+//DIKKAT: Sonladırma kısmı önemli...
+//yoksa uygulama işsletim sistemi tarafından sonlandırılır...
+//stackoverflow hatası...
+int Faktoriyel(int sayi)
+{
+    if (sayi == 1) return 1;
+    return sayi * Faktoriyel(sayi - 1);
+}
+Console.WriteLine(Faktoriyel(5));
+
+-------------------------------------------
+
+//void SayiDegistir(ref int sayi)
+void SayiDegistir(int sayi)
+{
+    sayi = 999;
+}
+
+void DiziDegistir(int[] sayilar)
+{ 
+    for(int i=0;i<sayilar.Length;i++)
+        sayilar[i] = 101;
+}
+
+void Yaz(int[] sayilar)
+{ 
+   foreach(int sayi in sayilar)
+        Console.Write(sayi + " ");
+    Console.WriteLine();
+}
+
+int x = 1;
+int[] dizi = { 1, 2, 3, 4, 5, 6 };
+
+Console.WriteLine("Metod calismadan once "+x);
+SayiDegistir(x);
+//SayiDegistir(ref x);
+Console.WriteLine("Metod calistiktan sonra " + x);
+
+Console.WriteLine();
+
+Console.WriteLine("Metod calismadan once ");
+Yaz(dizi);
+DiziDegistir(dizi);
+Console.WriteLine("Metod calistiktan sonra ");
+Yaz(dizi);
+
+//Ozet: Bir metoda parametre olarak deger tipli bir değişken gonderildiğinde o değişkenin bir kopyası çıkarılır, o yüzden kopya değişse de orjinal veri değişmez... Referans tiplilerde ise(string haric)
+//adresini gonderir, dolayısıyla yapılan değişiklikler orjinal veriyi degistirir...
+
+-------------------------------------------------------
+
+void Metod()
+{
+    int sayi1 = 111;
+    int sayi2 = 222;
+}
+
+//int MetodA()
+//{
+//    return 111;
+//}
+//Soru : sayi değişkeninin içerisindeki değeri dışarıya aktaran kodu yazınız?
+
+void MetodC(ref int s1, ref int s2)
+{
+    int sayi1 = 111;
+    int sayi2 = 222;
+
+    s1 = sayi1;
+    s2 = sayi2;
+}
+
+void MetodD(out int s1, out int s2)
+{
+    int sayi1 = 111;
+    int sayi2 = 222;
+
+    s1 = sayi1;
+    s2 = sayi2;
+}
+
+
+int x=0, y=0;
+
+MetodC(ref x, ref y);
+Console.WriteLine(x  + " " + y);
+
+int u, v;
+MetodD(out u,out v);
+Console.WriteLine(u + " " + v);
+
+//ref ile out arasındaki en buyuk fark out kullanırken ilk deger ataması yapmak zorunda değiliz...
+
+------------------------------------------------------
+
+//int sayi = int.Parse(Console.ReadLine());
+
+//int number;
+//bool kontrol = int.TryParse(Console.ReadLine(), out number);
+//if (kontrol)
+//    Console.WriteLine(number);
+
+
+bool kontrol = int.TryParse(Console.ReadLine(), out int sayi);
+if (kontrol)
+    Console.WriteLine(sayi);
+    
+----------------------------------------------------------
+
+
+
 
