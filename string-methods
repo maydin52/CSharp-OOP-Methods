@@ -1,0 +1,28 @@
+//String Metodlar...
+
+string str = "Merhaba Dünya...";
+
+//Contains(); bir string ifade içerisinde istenilen karakteri veya string ifadeyi arar.. bulursa true bulamazsa false doner...
+//Case-Sensitive
+Console.WriteLine(str.Contains('a'));
+Console.WriteLine(str.Contains('ı'));
+Console.WriteLine(str.Contains("Dünya"));
+Console.WriteLine(str.Contains(" "));
+
+//IndexOf(): girilen bir karakter veya string ifadenin varsa string içerisindeki indisini yoksa -1 dondurur...
+Console.WriteLine(str.IndexOf('a'));
+Console.WriteLine(str.IndexOf("Dünya"));
+Console.WriteLine(str.IndexOf("Mars"));
+
+//Insert(): Istenilen indise istenilen string ifadeyi ekler...
+Console.WriteLine(str.Insert(0,"Hi,"));
+Console.WriteLine(str.Insert(str.Length,"Hi,"));
+
+//Merhaba Guzel Dünya...
+Console.WriteLine(str.Insert(7, "Güzel"));
+
+Console.WriteLine(str.Insert(str.IndexOf(' '), " Güzel"));
+
+//Replace():istenilen string veya karakteri yeni degerle değiştirir...
+Console.WriteLine(str.Replace("a", "z"));
+Console.WriteLine(str.Replace(" ", " Guzel "));
