@@ -1,0 +1,111 @@
+//Metodun Tanımlanması..
+void Islem(string mesaj)
+{
+    Console.WriteLine("******************");
+    Console.WriteLine("* " + mesaj+" *");
+    Console.WriteLine("******************");
+}
+
+//Metodun cagirilmasi 
+//Islem();
+//Islem();
+//Islem();
+//Islem();
+//Islem();
+//Islem();
+//Islem();
+//Islem();
+
+Islem("Naber");
+Islem("MErhaba");
+Islem("Iyı Aksamlar");
+
+
+//Function:Geriye deger dondurur
+//Procedur:Tanımli isleri yapar deger dondurmez...
+//Methods:C# bazen deger dondurur bazen dondurmez...
+
+//Metodların Tipleri
+//1-Deger donduren veya dondurmeyen metodlar
+//2-Parametresi olan veya olmayan metodlar...
+
+//Metod isimleri MS tarafında Pascal Case yazılır..
+
+//... return_type MetodunAdi(parametreler)
+
+// eğer bir metod geriye deger dondurmeyecek ise;
+// return type yerine void yazılır...
+// return type void harici bir tip ise (int,string, double,bool) o tipten bir deger dondurur...
+//bir nmetod geriye deger dondurecekse içerisinde en az bir tane "return" olmalı...
+
+void Islem()
+{ 
+    //Geriye deger dondurmeyen, parametresi olmayan metod...
+}
+
+int SayiDondur()
+{
+    return 1;
+    //Ulasılamayan kod uyarısı...
+    //Console.WriteLine();
+}
+
+bool Kontrol()
+{ 
+  return false;
+}
+
+//Console.WriteLine(Islem());
+//Deger dondurmeyen metodları CW ile kullanamayız...
+
+Console.WriteLine(SayiDondur());
+Console.WriteLine(Kontrol());
+
+int sayi = SayiDondur();
+Console.WriteLine(sayi+1);
+
+
+//Metodlarda parametre
+int s1, s2;
+//Bu sekilde değişken tanımlanabilir, fakat parametre tanımlamaz...
+
+void Islem(int sayi1 , int sayi2)
+{ 
+    //İki tamsayi parametresi olan, geriye deger dondurmeyen metod...
+    Console.WriteLine(sayi1 /sayi2);
+}
+
+void Islem2(string str, bool kontrol,int sayi)
+{ 
+}
+
+Islem(6, 3);
+
+//Tavsiye edilen kullanım....
+int Topla(int sayi1,int sayi2)
+{
+    return sayi1 + sayi2;    
+}
+
+//Metodlar "Ortam Bağımsız" yazılmalıdır... 
+void Topla2(int sayi1, int sayi2)
+{
+    Console.WriteLine(sayi1 + sayi2);
+}
+
+Console.WriteLine(Topla(6,4));
+
+Topla2(6, 4);
+
+int DegerDondur(bool kontrol)
+{
+    if (kontrol)
+        return 11;
+    else 
+        return -11;
+}
+
+Console.WriteLine(DegerDondur(true));
+Console.WriteLine(DegerDondur(false));
+
+
