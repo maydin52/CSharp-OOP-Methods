@@ -28,4 +28,59 @@ Console.WriteLine(str.Replace("a", "z"));
 Console.WriteLine(str.Replace(" ", " Guzel "));
 
 
+--------------------------------------
+
+//contains, ınsert , indexof, replace
+
+string strMesaj = "Merhaba Dünya";
+
+Console.WriteLine(strMesaj.IndexOf('a'));
+
+//bir karakter veya string'i bir başka string içerisinde arar en son kullanılanın indisini verir...
+Console.WriteLine(strMesaj.LastIndexOf('a'));
+
+string strPath = @"c:\a\b\c\d\deneme\data.txt";
+//dosya adı ve turu nedir...
+
+//string'in uzunluğunu verir...
+Console.WriteLine(strMesaj.Length);
+
+//Bir string icinde verilen indisten sonrasını atar....
+Console.WriteLine(strMesaj.Remove(3));
+//Bir string icinde verilen indisten sonra, belirtilen sayı kadar karakteri atar...
+Console.WriteLine(strMesaj.Remove(3,3));
+
+Console.WriteLine(strMesaj.Split('e','a'));
+
+string[] dizi = strMesaj.Split('e', 'a');
+
+foreach (string d in dizi)
+{
+    Console.WriteLine(d);
+}
+
+//Veri paylaşımı
+//CSV(Comma Seperated Values)
+//XML,
+//JSON
+
+//Remove metodunun tersi...
+Console.WriteLine(strMesaj.Substring(3));
+Console.WriteLine(strMesaj.Substring(3,3));
+
+Console.WriteLine(strMesaj.ToLower());
+Console.WriteLine(strMesaj.ToUpper());
+
+string yeni = strMesaj.ToLower();
+
+string ilkHarf = strMesaj.Remove(1).ToUpper();
+string gerisi = strMesaj.Substring(1).ToLower();
+Console.WriteLine(ilkHarf+ gerisi);
+
+string strMessage = "          Hello             ";
+Console.WriteLine(strMessage.TrimStart());
+Console.WriteLine(strMessage.TrimEnd());
+Console.WriteLine(strMessage.Trim());
+
+
 
