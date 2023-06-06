@@ -1,0 +1,22 @@
+//Matematik fonksiyonları 
+Console.WriteLine(Math.PI); //Constant
+
+Console.WriteLine(Math.Round(4.35));
+Console.WriteLine(Math.Round(4.55));
+Console.WriteLine("R "+Math.Round(4.51));
+
+//Yukarı yuvarlar..
+Console.WriteLine(Math.Ceiling(4.35));
+//Taban yuvarlar...
+Console.WriteLine(Math.Floor(4.35));
+
+//Karekokunu alır..
+Console.WriteLine(Math.Sqrt(16));
+//sayının kuvvetini alır...
+Console.WriteLine(Math.Pow(2, 3));
+
+//Mutlak deger alır...
+Console.WriteLine(Math.Abs(-55));
+
+//double sayılarda  kusuratı atar...
+Console.WriteLine(Math.Truncate(3.44));
