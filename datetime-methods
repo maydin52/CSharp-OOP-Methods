@@ -1,0 +1,27 @@
+//Zamanla ilgili kullanım...
+DateTime dateTime = DateTime.Now;
+
+Console.WriteLine(dateTime.ToShortDateString());
+Console.WriteLine(dateTime.ToShortTimeString());
+
+Console.WriteLine(dateTime.ToLongDateString());
+Console.WriteLine(dateTime.ToLongTimeString());
+
+
+
+
+Console.WriteLine( dateTime );
+Console.WriteLine( dateTime.Year);
+Console.WriteLine( dateTime.Month);
+Console.WriteLine( dateTime.Day);
+
+Console.WriteLine("----");
+Console.WriteLine( dateTime.Day +"/" + dateTime.Month + "/" + dateTime.Year );
+
+Console.WriteLine(dateTime.ToString("dd MM yy"));
+
+DateTime aralık=  DateTime.Parse("6/6/2023");
+Console.WriteLine(aralık.ToString());
+
+TimeSpan fark = aralık - dateTime;
+Console.WriteLine(fark.TotalDays);
