@@ -26,3 +26,6 @@ Console.WriteLine(str.Insert(str.IndexOf(' '), " Güzel"));
 //Replace():istenilen string veya karakteri yeni degerle değiştirir...
 Console.WriteLine(str.Replace("a", "z"));
 Console.WriteLine(str.Replace(" ", " Guzel "));
+
+
+
