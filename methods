@@ -531,6 +531,53 @@ Console.WriteLine(u + " " + v);
 
 //ref ile out arasındaki en buyuk fark out kullanırken ilk deger ataması yapmak zorunda değiliz...
 
+-----------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Deneme
+    {
+        int x = 111, y = 222, z = 333;
+
+        public void DegerDondur(string mesaj,out int sayi1,out int sayi2, out int sayi3)
+        {
+            sayi1 = x; sayi2 = y; sayi3 = z;
+        }
+    }
+}
+
+
+//Metodlarda ref , out parametreleri...
+
+//int.TryParse()
+
+using ConsoleApp4;
+
+int Toplam(int s1, int s2)
+{
+    return s1 + s2;
+}
+
+Toplam(6, 7);
+
+Deneme deneme = new Deneme();
+deneme.DegerDondur("Naber",out int a, out int b, out int c);
+
+Console.WriteLine($"{a} {b} {c}");
+
+//int sayi = int.Parse(Console.ReadLine());
+bool kontrol= int.TryParse(Console.ReadLine(), out int sayi);
+if(kontrol==true)
+    Console.WriteLine(sayi);
+else
+    Console.WriteLine("Girdiginiz veri tipi yanlış..");
+
 ------------------------------------------------------
 
 //int sayi = int.Parse(Console.ReadLine());
