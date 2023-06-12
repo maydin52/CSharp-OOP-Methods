@@ -425,6 +425,28 @@ int Faktoriyel(int sayi)
 }
 Console.WriteLine(Faktoriyel(5));
 
+
+
+//Recursive methods
+int Faktoriyel(int sayi)
+{
+    if (sayi == 1) return 1;
+    return sayi * Faktoriyel(sayi - 1);
+}
+
+Console.WriteLine(Faktoriyel(5));
+
+//
+var d1 = 12;
+var d2 = "Cevdet";
+
+var d6 = 44.55;
+var d3 = 44.55M;
+var d4 = 44.55F;
+
+var ad = Console.ReadLine();
+
+
 -------------------------------------------
 
 //void SayiDegistir(ref int sayi)
