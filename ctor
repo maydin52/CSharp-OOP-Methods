@@ -1,0 +1,98 @@
+//constructor, deconstructor(destructure)
+//ctor: Bir sınıf RAM de olusturulurken ilk calisan metoddur...
+//destructure ise; en son calisan metoddur..
+
+//ctor nasıl yazılır?
+//1-class ile aynı isimde olmalı...
+//2-return type yok
+
+//Varsayılan ctor; bir sınıfın parametresi olmaya ctor'u dur...
+
+//Bir sınıfta kaç tane ctor olabilir?
+//Imzası farklı olmak kaydıyla n tane ctor yazılabilir...
+
+//Destructure:Bir sınıfta bir tane destructure olabilir...
+//Kullanılması tavsiye edilmez... IDisposable
+//Object RAM den silinirken en nson calisan metoddur...
+
+//Ctor lar nerelerde kullanılır...
+//1-objenin elemanlarına ilk deger atanması icin kullanılır...(Object Initializer)
+//2-Object olusturulurken yapılması istenilen işlemler için kullanılır...(Form-InitiallizeComponent())
+//3-Nesne olusturulurken kullanıcıyı birşeylere zorlamak için kullanılır(SOLID-DIP)
+
+using ConsoleApp5;
+using System.Linq.Expressions;
+
+Personel personel = new Personel("");
+personel = null;
+Musteri musteri = new Musteri();
+
+------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class Musteri
+    {
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class Person
+    {
+        public int ID { get; set; }
+
+        public Person(int ID)
+        {
+            ID = ID;
+        }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    internal class Personel
+    {
+        //public Personel()
+        //{
+        //    Console.WriteLine("personel Sınıfı olustu..");
+        //}
+
+        public Personel(string ad)
+        {
+                
+        }
+
+        public Personel(string ad,string soyad)
+        {
+
+        }
+
+        public int PerID { get; set; } 
+
+        ~Personel() { 
+        }
+
+
+    }
+}
+
+
