@@ -325,6 +325,26 @@ namespace ConsoleApp5
            // int s= Toplam(6, 7, 78, 8, 9, 8);
          
         }
+        
+        int Topla(params int[] sayilar)
+        {
+            int toplam = 0;
+
+            foreach (int sayi in sayilar)
+                toplam += sayi;
+
+            return toplam;
+
+        }
+
+        string strMesaj = "Deneme 123";
+        //strMesaj.Split(';', ':', ',');
+
+    Console.WriteLine(Topla(1,2));
+    Console.WriteLine(Topla(1,2,1,1,1,1,1,1,1,1));
+    Console.WriteLine(Topla(1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1));
+    Console.WriteLine(Topla(1,2,4,5,65,6));
+
     }
 }
 
