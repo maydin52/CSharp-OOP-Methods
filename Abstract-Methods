@@ -1,0 +1,30 @@
+
+
+internal abstract class Personel
+    {
+
+        public abstract string SicilNo { get; set; }
+        public abstract double MaasHesapla(); 
+        
+    }
+
+internal class CEO : Personel
+    {
+        public override string SicilNo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public override double MaasHesapla()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+internal class Hizmetli : Personel
+    {
+        public override string SicilNo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public override double MaasHesapla()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
