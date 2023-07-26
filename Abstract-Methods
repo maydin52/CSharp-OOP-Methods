@@ -1,3 +1,11 @@
+Abstract class içinde abstract metodun ve diğerlerinin body si olmaz. Sadece tanımlı olur. Interface lerde olduğu gibi
+Abstract dışındaki classların içinde de abstract metodun body si olmaz.
+
+Abstract metotlar mirasta kullanılacağı class a implement edilmelidir ve burada gövdesi yazılmalıdır ve zorunluluk var. Kullanıcının kullanmasına zorlamak için.
+Polymorfism de zorunluluk yok.
+Demekki sadece virtual ile override kullanılmıyor.
+
+
 
 
 internal abstract class Personel
