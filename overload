@@ -1,0 +1,49 @@
+
+namespace OverLoadMethodExample
+{
+  public class Program
+  {
+    //Overload method.
+    static void MailOlusturucu(string Adi, string SunucuAdi)
+    {
+      Console.WriteLine(Adi + "@" + SunucuAdi);
+    }
+
+
+    static void MailOlusturucu(string GirilenAd)
+    {
+      Console.WriteLine(GirilenAd + "@hotmail.com");
+    }
+
+
+    static void MailOlusturucu(string Ad,string Soyad,string mailUzantisi )
+    {
+      Console.WriteLine(Ad + Soyad + mailUzantisi);
+    }
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Kullanıcı Adı");
+      string userName = Console.ReadLine();
+
+      MailOlusturucu(userName);
+
+
+      Console.WriteLine("Kullanıcı Adı");
+      string user_Name = Console.ReadLine();
+
+      string serverName = "gmail.com";
+
+      MailOlusturucu(user_Name, serverName);
+
+
+    }
+
+
+
+
+  }
+}
+
+
+
+
