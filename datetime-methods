@@ -25,3 +25,44 @@ Console.WriteLine(aralık.ToString());
 
 TimeSpan fark = aralık - dateTime;
 Console.WriteLine(fark.TotalDays);
+
+--------------------------------
+
+//Datetime functionlar tarih ve zaman bazlı işlemler yapmamızı sağlayan built-in functionlar.
+
+Console.WriteLine(DateTime.Now.ToString());
+
+Console.WriteLine(DateTime.Now.ToLongDateString());
+
+Console.WriteLine(DateTime.Now.ToShortTimeString());
+
+Console.WriteLine(DateTime.Now.ToLongTimeString());
+
+Console.WriteLine(DateTime.Now.ToShortDateString());
+
+Console.WriteLine(DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year);
+
+bool artikYilMi = DateTime.IsLeapYear(1989);
+
+Console.WriteLine(artikYilMi == true ? "Şubat 29 çeker" : "Şubat 28 çeker");
+
+string haftaninGunu = DateTime.Now.DayOfWeek.ToString();
+
+Console.WriteLine(haftaninGunu);
+
+string yilinKacinciGunu = DateTime.Now.DayOfYear.ToString();
+
+Console.WriteLine("Bugun yılın " + yilinKacinciGunu + ". gündür");
+
+DateTime yeniZaman = new DateTime(1990,06,25,05,00,03);
+
+DateTime bugun = DateTime.Now;
+
+TimeSpan zamanFarki = bugun - yeniZaman;
+
+int toplamGun = Convert.ToInt32(zamanFarki.TotalDays);
+
+int toplamDakika = Convert.ToInt32(zamanFarki.TotalMinutes);
+
+Console.WriteLine("Toplam" + toplamGun + "Gündür yaşıyorsun.");
+
