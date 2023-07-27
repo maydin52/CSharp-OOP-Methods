@@ -20,3 +20,72 @@ Console.WriteLine(Math.Abs(-55));
 
 //double sayılarda  kusuratı atar...
 Console.WriteLine(Math.Truncate(3.44));
+
+----------------------------
+
+
+//Verinin ondalıklı degeri bir üst degere tamamlanır.
+//Console.WriteLine(Math.Ceiling(12.98).ToString());
+
+//Console.WriteLine(Math.Floor(12.45).ToString());
+
+//Console.WriteLine(Math.Round(12.50).ToString());
+
+//Console.WriteLine(Math.Truncate(12.98).ToString());
+
+//Console.WriteLine(Math.Max(45, 50).ToString());
+
+//Console.WriteLine(Math.Min(45, 65).ToString());
+
+//Console.WriteLine(Math.Pow(3, 4).ToString());
+
+//Console.WriteLine(Math.Sqrt(25).ToString());
+
+//Console.WriteLine(Math.Sign(-35).ToString());
+
+//Console.WriteLine(Math.Abs(-65).ToString());
+
+//Console.WriteLine("1.Sayı: ");
+//int birinciSayi = Convert.ToInt32(Console.ReadLine());
+
+//Console.WriteLine("2.Sayı: ");
+//int ikinciSayi = Convert.ToInt32(Console.ReadLine());// override object.Equals
+//Console.WriteLine("3.Sayı: ");
+//int ucuncuDeger = Convert.ToInt32(Console.ReadLine());
+
+//int minDeger = Math.Min(Math.Min(birinciSayi, ikinciSayi), ucuncuDeger);
+
+//int maxDeger = Math.Max(Math.Max(birinciSayi, ikinciSayi), ucuncuDeger);
+
+//Console.WriteLine("Min Deger: " + minDeger);
+//Console.WriteLine("Max Deger: " + maxDeger);
+
+
+//Kullanıcıdan alınan iki sayının üstlü bir şekilde hesaplamasını saglayan method.
+
+//double UstAlma(int sayi1,int sayi2)
+//{
+//  return Math.Pow(sayi1, sayi2);
+//}
+
+//Console.WriteLine("1. Sayıyı: ");
+//int s1 = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("2. Sayıyı: ");
+//int s2 = Convert.ToInt32(Console.ReadLine());
+
+
+//Console.WriteLine("Sayının üstünün sonucu: " + UstAlma(s1,s2));
+
+
+//Kullanıcıdan alınan sayının karakökünü bir şekilde hesaplamasını saglayan method.
+
+double KarakokHesapla(double s1)
+{
+  return Math.Sqrt(s1);
+}
+
+Console.WriteLine("Kullanıcıdan alınan sayı: ");
+double sayi1 = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Sayının karakök sonucu: " + KarakokHesapla(sayi1));
+
